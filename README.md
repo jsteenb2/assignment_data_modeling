@@ -1,5 +1,5 @@
 By Johnny Steenbergen & Adrian Mui
-# assignment_data_modeling
+# assignment\_data\_modeling
 
 Mmmmm.... dataaaaa....
 
@@ -88,21 +88,38 @@ Collect products,user, orders, shipments, and other data to create a package for
 2. User
 	* name:varchar
 	* location_id:int
-	* gender:varchar
 3. Order
    * order_num:varchar
+   * user_id:int
+   * payment_id:int
 4. Location
 	* address:varchar
 	* city:varchar
 	* state:varchar
 	* country:varchar
 5. Shipment
-   * ship_to_location_id:int
-   * ship_from_location_id:int
+   * ship\_to\_location_id:int
+   * ship\_from\_location_id:int
    * tracking_num:varchar
    * order_id:int
 6. Item
 	* product_id:int
+	* quantity:int
 	* order_id:int
+7. Payment
+	* user_id:int
+	* location_id:int
+	* payment_source_id:int
+	  (create sources perhaps later)
 
+**How can you handle the quantity of items in each order?** 
+Simply create the item entity which holds product and quantity of it. The order has a one-to-many relationship with the item. The order_id will be a foreign key in the item entity.
 
+**How do you know where an order has been shipped?**
+Have a ship\_to attr in the shipment that corresponds to a location_id, which is the location that it is shipping too.
+
+**Bonus: What happens to your historical data if a user opts to delete their account?** 
+We lose users name, that's about all.
+
+**How might you handle this?**
+See above ^
