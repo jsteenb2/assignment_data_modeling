@@ -107,7 +107,7 @@ Collect products,user, orders, shipments, and other data to create a package for
 	* quantity:int
 	* order_id:int
 7. Payment
-	* user_id:int
+	* name:varchar
 	* location_id:int
 	* payment_source_id:int
 	  (create sources perhaps later)
@@ -119,7 +119,7 @@ Simply create the item entity which holds product and quantity of it. The order 
 Have a ship\_to attr in the shipment that corresponds to a location_id, which is the location that it is shipping too.
 
 **Bonus: What happens to your historical data if a user opts to delete their account?** 
-We lose users name, that's about all.
+We lose users name, that's about all. Since payment has unique name attr independent of user.
 
 **How might you handle this?**
 See above ^
