@@ -1,9 +1,9 @@
-By Johnny Steenbergen & Adrian Mui
 # assignment\_data\_modeling
 
-Mmmmm.... dataaaaa....
+contributors: By [Johnny Steenbergen](https://github.com/jsteenb2) & [Adrian Mui](https://github.com/adrianmui)
 
-*Include your ERM modeling "pseudocode" in the space below*
+##Description
+This is an exercise in understanding how to model data. Understanding the way the data interacts with different tables and the web application itself is stressed.
 
 #Basics
 
